@@ -1,0 +1,29 @@
+--Create a clothing store database
+
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item TEXT, color TEXT, size TEXT, quantity INTEGER, price INTEGER);
+
+
+INSERT INTO clothing_store VALUES (1, "TShirts", "Heather", "S/M/L/XL", 23, 15.99);
+INSERT INTO clothing_store VALUES (2, "Sweaters", "Marled", "S/M/L/XL", 34, 39.99);
+INSERT INTO clothing_store VALUES (3, "Jackets", "Gray", "S/M/L/XL", 12, 24.99);
+INSERT INTO clothing_store VALUES (4, "Coats", "Brown", "S/M/L/XL", 15, 49.99);
+INSERT INTO clothing_store VALUES (5, "Jeans", "Denim", "S/M/L/XL", 54, 19.99);
+INSERT INTO clothing_store VALUES (6, "Shorts", "Blue", "S/M/L/XL", 2, 4.99);
+INSERT INTO clothing_store VALUES (7, "Skirts", "Multicolor", "S/M/L/XL", 27, 9.99);
+INSERT INTO clothing_store VALUES (8, "Socks", "Black", "OS", 98, .99);
+INSERT INTO clothing_store VALUES (9, "Pajamas", "Multicolor", "S/M/L/XL", 25, 14.99);
+INSERT INTO clothing_store VALUES (10, "Shoes", "Black", "S/M/L/XL", 0, 29.99);
+INSERT INTO clothing_store VALUES (11, "Raincoats", "Yellow", "S/M/L/XL", 31, 74.99);
+INSERT INTO clothing_store VALUES (12, "Dresses", "Nude", "S/M/L/XL", 9, 80.01);
+INSERT INTO clothing_store VALUES (13, "Hats", "Multicolor", "OS", 666, 19.69);
+INSERT INTO clothing_store VALUES (14, "Backpacks", "Indigo", "OS", 100, 49.99);
+INSERT INTO clothing_store VALUES (15, "Jewelry", "Silver", "OS", 40, 99.99);
+
+--Display the database ordered by price
+
+SELECT * FROM clothing_store
+ORDER BY price desc;
+
+--What is the total quantity of clothing inventory
+SELECT SUM(quantity)
+FROM clothing_store;
